@@ -56,7 +56,7 @@ if uploaded_file is not None:
                         st.subheader("📝 Detected Fraud Transactions")
                         st.dataframe(frauds[['Time', 'Amount']].reset_index(drop=True))
 
-                        # Optional Download Button
+                        # Download Button
                         csv = frauds.to_csv(index=False).encode('utf-8')
                         st.download_button(
                             label="📥 Download Fraud Transactions CSV",
